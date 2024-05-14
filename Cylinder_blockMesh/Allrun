@@ -1,0 +1,4 @@
+blockMesh
+decomposePar
+reconstructPar -latestTime 
+postProcess -func sample -noZero -latestTime -noFunctionObjects

@@ -1,0 +1,58 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  v2312                                 |
+|   \\  /    A nd           | Website:  www.openfoam.com                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       dictionary;
+    object      blockMeshDict;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+scale   0.001;
+
+// Divisions in x/y/z directions. Can be unequal.
+nx   15;
+ny   15;
+nz   100;
+
+// radius
+
+(省略)
+
+geometry
+{
+}
+
+vertices
+(
+
+);
+
+blocks
+(
+
+);
+
+edges
+(
+
+);
+
+faces
+(
+
+);
+
+boundary
+(
+);
+
+
+
+// ************************************************************************* //

@@ -1,0 +1,75 @@
+// -*- C++ -*-
+
+type            sets;
+libs            (sampling);
+
+writeControl    onEnd;
+
+interpolationScheme cellPoint;
+
+setFormat       raw;
+
+fields          (U);
+
+sets
+{
+    z_0.001m 
+    {
+        type        face;
+        axis        y;
+        start       ( 0.0 -0.01 0.001);
+        end         ( 0.0  0.01 0.001);
+    }
+    z_0.05m    
+    {
+        type        face;
+        axis        y;
+        start       ( 0.0 -0.01 0.05);
+        end         ( 0.0  0.01 0.05);
+    }
+    z_0.2m    
+    {
+        type        face;
+        axis        y;
+        start       ( 0.0 -0.01 0.2);
+        end         ( 0.0  0.01 0.2);
+    }
+    z_0.4m    
+    {
+        type        face;
+        axis        y;
+        start       ( 0.0 -0.01 0.1);
+        end         ( 0.0  0.01 0.1);
+    }
+    z_0.5m
+    {
+        type        face;
+        axis        y;
+        start       ( 0.0 -0.01 0.5);
+        end         ( 0.0  0.01 0.5);
+    }
+    z_0.6m
+    {
+        type        face;
+        axis        y;
+        start       ( 0.0 -0.01 0.6);
+        end         ( 0.0  0.01 0.6);
+    }
+    z_1.0m
+    {
+        type        face;
+        axis        y;
+        start       ( 0.0 -0.01 1.0);
+        end         ( 0.0  0.01 1.0);
+    }
+    z_1.15m
+    {
+        type        face;
+        axis        y;
+        start       ( 0.0 -0.01 1.15);
+        end         ( 0.0  0.01 1.15);
+    }
+}
+
+
+// ************************************************************************* //

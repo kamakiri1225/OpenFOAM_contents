@@ -1,0 +1,81 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  2312                                  |
+|   \\  /    A nd           | Website:  www.openfoam.com                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    arch        "LSB;label=32;scalar=64";
+    class       dictionary;
+    location    "448/uniform/functionObjects";
+    object      functionObjectProperties;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+cdf7e925f5746741c316f5fbcf39ad0dfca90775
+{
+    solverInfo
+    {
+        scalar
+        {
+            Ux_initial      9.975650000000001e-07;
+            Ux_final        9.975650000000001e-07;
+            Uy_initial      9.914979999999999e-07;
+            Uy_final        9.914979999999999e-07;
+            Uz_initial      2.2555e-08;
+            Uz_final        2.2555e-08;
+            p_initial       9.12692e-07;
+            p_final         9.12692e-07;
+        }
+        label
+        {
+            Ux_iters        0;
+            Uy_iters        0;
+            Uz_iters        0;
+            p_iters         0;
+        }
+    }
+    continuityError1
+    {
+        scalar
+        {
+            local           6.987924691038912e-07;
+            global          -4.550929972291238e-07;
+            cumulative      -6.536854386086e-07;
+        }
+    }
+    inlet
+    {
+        vector
+        {
+            sum(inlet,U)    ( 0 0 112.5 );
+        }
+        scalar
+        {
+            sum(inlet,phi)  -3.135853898025021e-05;
+        }
+    }
+    outlet
+    {
+        vector
+        {
+            sum(outlet,U)   ( 2.04551e-05 1.04484e-05 135.325 );
+        }
+        scalar
+        {
+            sum(outlet,phi) 3.135836772763224e-05;
+        }
+    }
+}
+
+continuityError1
+{
+    cumulative      -6.536854386086e-07;
+}
+
+
+// ************************************************************************* //
