@@ -1,6 +1,5 @@
 import os
 import Mesh
-import MeshPart
 import re
  
 # 現在のフォルダ
