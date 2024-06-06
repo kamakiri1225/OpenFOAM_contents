@@ -1,0 +1,118 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  v2312                                 |
+|   \\  /    A nd           | Website:  www.openfoam.com                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       dictionary;
+    object      fvSchemes;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+// ddtSchemes
+// {
+//     default steadyState;
+// }
+
+// gradSchemes
+// {
+//     default         Gauss linear;
+// }
+
+// divSchemes
+// {
+//     default         none;
+
+//     div(phi,U)      bounded Gauss limitedLinear 0.2;
+
+//     energy          bounded Gauss limitedLinear 0.2;
+//     div(phi,K)      $energy;
+//     div(phi,h)      $energy;
+
+//     turbulence      bounded Gauss limitedLinear 0.2;
+//     div(phi,k)      $turbulence;
+//     div(phi,epsilon) $turbulence;
+//     div(phi,omega) $turbulence;
+
+//     div(((rho*nuEff)*dev2(T(grad(U))))) Gauss linear;
+// }
+
+// laplacianSchemes
+// {
+//     default         Gauss linear orthogonal;
+// }
+
+// interpolationSchemes
+// {
+//     default         linear;
+// }
+
+// snGradSchemes
+// {
+//     default         orthogonal;
+// }
+
+// wallDist
+// {
+//     method          meshWave;
+// }
+
+ddtSchemes
+{
+	default    steadyState;
+}
+
+geometry
+{
+	type    highAspectRatio;
+	minAspect    10;
+	maxAspect    100;
+}
+
+gradSchemes
+{
+	default    Gauss linear;
+	grad(p_rgh)    cellLimited<Venkatakrishnan> Gauss linear 1;
+	grad(U)    cellLimited<Venkatakrishnan> Gauss linear 1;
+	grad(turb)    cellLimited<Venkatakrishnan> Gauss linear 1;
+	grad(h)    cellLimited<Venkatakrishnan> Gauss linear 1;
+	grad(K)    cellLimited<Venkatakrishnan> Gauss linear 1;
+	grad(Ii_h)    cellLimited<Venkatakrishnan> Gauss linear 1;
+}
+
+divSchemes
+{
+	default    Gauss linear;
+	div(phi,U)    bounded Gauss linearUpwind grad(U);
+	div(phi,h)    bounded Gauss upwind;
+	div(phi,K)    bounded Gauss upwind;
+	div(Ji,Ii_h)    bounded Gauss linearUpwind grad(Ii_h);
+	div((nuEff*dev2(T(grad(U)))))    Gauss linear;
+}
+
+laplacianSchemes
+{
+	default    Gauss linear limited corrected 0.333;
+}
+
+interpolationSchemes
+{
+	default    linear;
+}
+
+snGradSchemes
+{
+	default    limited 0.333;
+}
+
+wallDist
+{
+	method    meshWave;
+}
+
+// ************************************************************************* //
