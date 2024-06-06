@@ -1,5 +1,7 @@
 # 技術書のモデル
 
+[OpenFOAM（自宅で始める流体解析）](https://techbookfest.org/product/7ruavtgHTW2gXFyXunvTBN)
+
 - Cylinder_blockMesh：blockMeshで作成した円管モデル
 - Cylinder_snappyHexMesh：snappyHexMeshで作成した円管モデル
 - export_stlAll.py：FreeCADでstlファイルをまとめて出力するマクロ用
