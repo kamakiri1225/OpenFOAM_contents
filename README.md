@@ -9,3 +9,9 @@
 お手数ですがこちらでご確認ください。
 
 [正誤表](https://note.com/kamakiriphysics/n/ncc23114c4e0d)
+
+## 技術書からの発展
+
+こちらはモデルの検証途中のものです。
+
+- Cylinder_blockMesh_heatWallFlux_base：壁面熱流束一定値による円管内の熱伝達率
