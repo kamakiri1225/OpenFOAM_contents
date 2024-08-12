@@ -257,7 +257,7 @@ addLayersControls
         {
             nSurfaceLayers 3;
         } 
-        sideWall
+        walls
         {
             nSurfaceLayers 3;
         } 
